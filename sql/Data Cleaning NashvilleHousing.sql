@@ -49,9 +49,9 @@ WHERE PropertyAddress IS NULL
 
 SELECT *
 FROM PortfolioProject.dbo.NashvilleHousing
-ORDER BY ParcelID --nota-se que o parcelID se repete algumas vezes e o PropertyAddress é sempre o mesmo, entao dessa forma, 
---caso PropertyAddress esteja nulo mas tenha ele preenchido em outra linha onde o ParcelID é igual, podemos preenche-lo
---nota-se tambem que UNIQUEID realmente é unico kkk
+ORDER BY ParcelID --nota-se que o parcelID se repete algumas vezes e o PropertyAddress Ã© sempre o mesmo, entao dessa forma, 
+--caso PropertyAddress esteja nulo mas tenha ele preenchido em outra linha onde o ParcelID Ã© igual, podemos preenche-lo
+--nota-se tambem que UNIQUEID realmente Ã© unico kkk
 
 
 SELECT NashA.ParcelID, NashA.PropertyAddress, NashB.ParcelID, NashB.PropertyAddress, ISNULL(NashA.PropertyAddress,NashB.PropertyAddress)
@@ -73,7 +73,7 @@ WHERE NashA.PropertyAddress IS NULL
 
 --------------------------------------------------------------------------------------------------------------------
 
---Quebrando endereço de propriedade em colunas individuais (Endereco, Cidade, Estado)
+--Quebrando endereÃ§o de propriedade em colunas individuais (Endereco, Cidade, Estado)
 SELECT PropertyAddress
 FROM PortfolioProject.dbo.NashvilleHousing
 
@@ -104,7 +104,7 @@ FROM PortfolioProject.dbo.NashvilleHousing
 
 ------------------------------------------------------------------------------------------------------------------------------
 
---Quebrando endereço do dono em colunas individuais (Endereco, Cidade, Estado)
+--Quebrando endereÃ§o do dono em colunas individuais (Endereco, Cidade, Estado)
 SELECT OwnerAddress
 FROM PortfolioProject.dbo.NashvilleHousing
 
